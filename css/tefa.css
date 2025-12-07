@@ -88,9 +88,10 @@ header nav ul {
 }
 @media (max-width: 767px) {
     header nav ul {
-    display: none;
+        display: none;
     }
-    header nav .toggle-menu:hover + ul {
+    header nav .toggle-menu:hover + ul,
+    header nav ul:hover {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -98,6 +99,15 @@ header nav ul {
     left: 0;
     width: 100%;
     background-color: rgb(0 0 0 / 50%);
+    }
+    header nav ul::before {
+        content: "";
+        position: absolute;
+        height: 80px;
+        width: 55px;
+        background: transparent;
+        right: 73px;
+        top: -42px;
     }
     header nav ul li a {
     padding: 15px !important;
